@@ -36,8 +36,8 @@
 - (UIView *)createSelectedView
 {
     self.clipsToBounds = NO;
-    self.coloredView.frame = CGRectMake(0, _EHDefaultGap * 1.2, self.bounds.size.width, self.bounds.size.height - _EHDefaultGap * 2.4);
-    self.coloredView.layer.cornerRadius = self.coloredView.bounds.size.height/2.0;
+    self.coloredView.frame = CGRectMake(7.5, 0, self.bounds.size.width- 15, self.bounds.size.height );
+    self.coloredView.layer.cornerRadius = 3;
     self.coloredView.layer.masksToBounds = NO;
     self.selectedView.clipsToBounds = NO;
     
@@ -61,14 +61,14 @@
 {
     self.titleLabel.frame = self.bounds;
     self.selectedView.frame = self.bounds;
-    self.coloredView.frame = CGRectMake( 0, _EHDefaultGap * 1.2, self.bounds.size.width, self.bounds.size.height - _EHDefaultGap * 2.4);
-    self.coloredView.layer.cornerRadius = self.coloredView.bounds.size.height/2.0;
+    self.coloredView.frame = CGRectMake( 7.5, 0, self.bounds.size.width-15, self.bounds.size.height );
+    self.coloredView.layer.cornerRadius = 3;
 }
 
 - (void)updateFramesForMovingFromRect:(CGRect)rect
 {
     self.selectedView.frame = CGRectMake(CGRectGetMinX(rect) - CGRectGetMinX(self.frame), 0, rect.size.width, self.selectedView.bounds.size.height);
-    self.coloredView.frame = CGRectMake(0 , _EHDefaultGap, self.selectedView.bounds.size.width , self.selectedView.bounds.size.height - _EHDefaultGap * 2);
-    self.coloredView.layer.cornerRadius = self.coloredView.bounds.size.height/2.0;
+    self.coloredView.frame = CGRectMake(7.5 , 0, self.selectedView.bounds.size.width -15, self.selectedView.bounds.size.height );
+    self.coloredView.layer.cornerRadius = 3;
 }
 @end

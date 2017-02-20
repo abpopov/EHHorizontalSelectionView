@@ -205,7 +205,7 @@
         
         CGSize strSize = [name sizeWithAttributes:@{NSFontAttributeName : font}];
         
-        return CGSizeMake(strSize.width + gap, frame.size.height);
+        return CGSizeMake(strSize.width +15+ gap, frame.size.height);
     }
     else
     {
